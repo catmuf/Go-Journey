@@ -60,7 +60,7 @@ func square(thing2 [5]float64) [5]float64 {
 	return thing2
 }
 
-// To solve the problem, use pointer
+// To solve the problem, use pointer. Since the thing1 and thing2 are the same array and takes a pointer from an array (memory location)
 func squarePointer(thing2 *[5]float64) [5]float64 {
 	fmt.Printf("Memory location of thing1: %p\n", thing2)
 	for i := range thing2 {
