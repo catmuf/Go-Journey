@@ -1,0 +1,19 @@
+Basic rules:
+Statically typed language
+    Must declare variables explicitly or inferred
+    var myVariable string (explicitly)
+    var myVariable = "Hello" (inferred)
+
+Strongly typed language
+    cannot combine two types of variables 
+    a =1
+    b ="two"
+    c = a+b, unlike javascript
+
+fast compiled language, translates human code to machine code binary (fast execution)
+
+Build in concurrency done with goroutines
+
+Simplicity syntax
+
+Garbage collection, cleans up unused memory 
