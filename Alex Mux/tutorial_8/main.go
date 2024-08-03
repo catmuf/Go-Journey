@@ -21,7 +21,7 @@ func main() {
 	t0 := time.Now()
 	for i := 0; i < len(dbData); i++ {
 		/*	the program spawn the task in the background but
-			didnt wait until the tasks finish it and closed the program.
+			didnt wait until the tasks finish and exit the program before they complete
 			Use wait to complete the tasks and then continue, sync.WaitGroup
 		*/
 		wg.Add(1)
@@ -41,7 +41,8 @@ func dbCall(i int) {
 	time.Sleep(time.Duration(delay) * time.Millisecond)
 	fmt.Println("The result from the database is:", dbData[i])
 	// add value to the slice
-	/*	but multiple threads modifing the same memory location
+	/*
+		but multiple threads modifing the same memory location
 		at the same time, can cause memory corruption, unexpected results.
 		Solution is to use mutex to control the writting to the slice, to make it safe for the cuncurrent program
 	*/
